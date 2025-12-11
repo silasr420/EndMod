@@ -1,0 +1,23 @@
+{
+  "block.endermod.chorus_moss": "Chorus Moss",
+  "block.endermod.chorus_sprouts": "Chorus Sprouts",
+
+  "block.endermod.chorus_log": "Chorus Log",
+  "block.endermod.stripped_chorus_log": "Stripped Chorus Log",
+  "block.endermod.chorus_wood": "Chorus Wood",
+  "block.endermod.stripped_chorus_wood": "Stripped Chorus Wood",
+  "block.endermod.chorus_planks": "Chorus Planks",
+  "block.endermod.chorus_sapling": "Chorus Sapling",
+  "block.endermod.chorus_leaves": "Chorus Leaves",
+
+  "block.endermod.chorus_slab": "Chorus Slab",
+  "block.endermod.chorus_stairs": "Chorus Stairs",
+
+  "block.endermod.chorus_pressure_plate": "Chorus Pressure Plate",
+  "block.endermod.chorus_button": "Chorus Button",
+
+  "block.endermod.chorus_fence": "Chorus Fence",
+  "block.endermod.chorus_fence_gate": "Chorus Fence Gate",
+
+  "creativetab.the_end": "The End"
+}
