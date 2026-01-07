@@ -44,3 +44,9 @@ Community Documentation: https://docs.minecraftforge.net/en/latest/gettingstarte
 LexManos' Install Video: https://youtu.be/8VEdtQLuLO0
 Forge Forums: https://forums.minecraftforge.net/
 Forge Discord: https://discord.minecraftforge.net/
+
+
+
+
+
+enough yapping from the default description: this is for java 1.21.1 
