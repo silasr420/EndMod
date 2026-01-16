@@ -39,6 +39,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.CHORUS_FENCE.get());
         dropSelf(ModBlocks.CHORUS_FENCE_GATE.get());
 
+        dropSelf(ModBlocks.VOID_SHALE.get());
+        dropSelf(ModBlocks.POLISHED_VOID_SHALE.get());
+
     }
     @Override
     protected Iterable<Block> getKnownBlocks() {

@@ -107,6 +107,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHORUS_FENCE_GATE = registerBlock("chorus_fence_gate",
             () -> new FenceGateBlock(WoodType.CHERRY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_FENCE_GATE)));
 
+    public static final RegistryObject<Block> VOID_SHALE = registerBlock("void_shale",
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5f).sound(SoundType.CALCITE)));
+
+    public static final RegistryObject<Block> POLISHED_VOID_SHALE = registerBlock("polished_void_shale",
+            () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5f).sound(SoundType.CALCITE)));
+
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

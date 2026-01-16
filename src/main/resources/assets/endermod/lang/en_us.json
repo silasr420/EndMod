@@ -19,5 +19,8 @@
   "block.endermod.chorus_fence": "Chorus Fence",
   "block.endermod.chorus_fence_gate": "Chorus Fence Gate",
 
+  "block.endermod.void_shale": "Void Shale",
+  "block.endermod.polished_void_shale": "Polished Void Shale",
+
   "creativetab.the_end": "The End"
 }

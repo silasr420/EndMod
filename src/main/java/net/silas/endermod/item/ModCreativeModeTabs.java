@@ -39,6 +39,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(new ItemStack(ModBlocks.CHORUS_FENCE_GATE.get()));
                         output.accept(new ItemStack(ModBlocks.CHORUS_FENCE.get()));
+
+                        output.accept(new ItemStack(ModBlocks.POLISHED_VOID_SHALE.get()));
+                        output.accept(new ItemStack(ModBlocks.VOID_SHALE.get()));
+
                     }).build());
 
     public static void register(IEventBus eventBus) {

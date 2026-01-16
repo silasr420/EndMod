@@ -65,6 +65,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockItem(ModBlocks.CHORUS_FENCE_GATE);
 
+        simpleBlock(ModBlocks.VOID_SHALE.get());
+        simpleBlock(ModBlocks.POLISHED_VOID_SHALE.get());
+
+        blockItem(ModBlocks.VOID_SHALE);
+        blockItem(ModBlocks.POLISHED_VOID_SHALE);
+
 
     }
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
