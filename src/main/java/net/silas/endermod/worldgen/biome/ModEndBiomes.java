@@ -7,6 +7,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.Musics;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
@@ -20,8 +22,8 @@ public class ModEndBiomes {
     }
 
     public static Biome chorusForest(HolderGetter<PlacedFeature> placedFeatureGetter, HolderGetter<ConfiguredWorldCarver<?>> carverGetter) {
-        // Mob spawns
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+        spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 10, 1, 2));
 
         // Biome features
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder(placedFeatureGetter, carverGetter);
@@ -31,10 +33,10 @@ public class ModEndBiomes {
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false).temperature(4.0F).downfall(0.0F)
                 .specialEffects((new BiomeSpecialEffects.Builder()).waterColor(0xbdb133).waterFogColor(0xbdb133).fogColor(0xbdb133)
-                        .skyColor(calculateSkyColor(2.0F))
+                        .skyColor(calculateSkyColor(2.0F)).ambientParticle(new AmbientParticleSettings(ParticleTypes.END_ROD, 0.00725f))
                         .ambientLoopSound(SoundEvents.AMBIENT_SOUL_SAND_VALLEY_LOOP
                         ).ambientMoodSound(new AmbientMoodSettings(SoundEvents.AMBIENT_BASALT_DELTAS_MOOD, 90000, 8, 2.0D))
-                        .backgroundMusic(Musics.createGameMusic(SoundEvents.AMBIENT_SOUL_SAND_VALLEY_LOOP)).build())
+                        .backgroundMusic(Musics.createGameMusic(SoundEvents.MUSIC_END)).build())
                 .mobSpawnSettings(spawnBuilder.build()).generationSettings(biomeBuilder.build()).build();
     }
 

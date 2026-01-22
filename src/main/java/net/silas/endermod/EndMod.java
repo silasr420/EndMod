@@ -15,7 +15,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.silas.endermod.block.ModBlocks;
 import net.silas.endermod.item.ModCreativeModeTabs;
 import net.silas.endermod.item.ModItems;
+import net.silas.endermod.worldgen.biome.ModBiomes;
+import net.silas.endermod.worldgen.biome.ModSurfaceRules;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(EndMod.MOD_ID)
@@ -52,6 +55,8 @@ public class EndMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        ModBiomes.registerBiomes();
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END, MOD_ID, ModSurfaceRules.makeChorusForestRules());
 
     }
 

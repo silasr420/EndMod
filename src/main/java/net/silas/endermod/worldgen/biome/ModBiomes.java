@@ -14,7 +14,7 @@ public class ModBiomes {
 
     public static void registerBiomes() {
 
-        EndBiomeRegistry.registerHighlandsBiome(CHORUS_FOREST, 20);
+        EndBiomeRegistry.registerHighlandsBiome(CHORUS_FOREST, 15);
     }
 
     public static void bootstrap(BootstrapContext<Biome> context) {

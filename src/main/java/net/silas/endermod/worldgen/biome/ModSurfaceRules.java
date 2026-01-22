@@ -14,9 +14,13 @@ public class ModSurfaceRules {
 
     public static SurfaceRules.RuleSource makeChorusForestRules() {
         return SurfaceRules.sequence(
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.CHORUS_FOREST), END_STONE),
-                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, CHORUS_MOSS)
-        );
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.CHORUS_FOREST),
+                SurfaceRules.sequence(
+                    SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, CHORUS_MOSS),
+                    SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, END_STONE),
+                    END_STONE)
+
+        ));
     }
 
     private static SurfaceRules.RuleSource makeStateRule(Block block) {
