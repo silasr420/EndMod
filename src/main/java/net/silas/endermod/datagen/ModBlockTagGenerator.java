@@ -39,6 +39,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.FENCES).add(ModBlocks.CHORUS_FENCE.get());
         this.tag(BlockTags.FENCE_GATES).add(ModBlocks.CHORUS_FENCE_GATE.get());
 
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CHORUS_LOG.get())
+                .add(ModBlocks.STRIPPED_CHORUS_LOG.get())
+                .add(ModBlocks.STRIPPED_CHORUS_WOOD.get())
+                .add(ModBlocks.CHORUS_WOOD.get());
+
+
 
 
     }

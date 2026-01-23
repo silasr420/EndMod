@@ -10,6 +10,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.silas.endermod.EndMod;
 import net.silas.endermod.block.ModBlocks;
+import net.silas.endermod.item.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -24,6 +25,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         buttonItem(ModBlocks.CHORUS_BUTTON, ModBlocks.CHORUS_PLANKS);
         fenceItem(ModBlocks.CHORUS_FENCE, ModBlocks.CHORUS_PLANKS);
+
+        withExistingParent(ModItems.CHORUS_RACCOON_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder simpleBlockBlockItem(RegistryObject<Block> item) {

@@ -1,6 +1,7 @@
 package net.silas.endermod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -13,6 +14,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.silas.endermod.block.ModBlocks;
+import net.silas.endermod.entity.ModEntities;
+import net.silas.endermod.entity.client.ChorusRaccoonRenderer;
 import net.silas.endermod.item.ModCreativeModeTabs;
 import net.silas.endermod.item.ModItems;
 import net.silas.endermod.worldgen.biome.ModBiomes;
@@ -79,7 +82,7 @@ public class EndMod
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.CHORUS_RACCOON.get(), ChorusRaccoonRenderer::new);
         }
     }
 }

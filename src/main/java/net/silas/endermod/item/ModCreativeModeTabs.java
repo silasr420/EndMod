@@ -43,6 +43,8 @@ public class ModCreativeModeTabs {
                         output.accept(new ItemStack(ModBlocks.POLISHED_VOID_SHALE.get()));
                         output.accept(new ItemStack(ModBlocks.VOID_SHALE.get()));
 
+                        output.accept(new ItemStack(ModItems.CHORUS_RACCOON_SPAWN_EGG.get()));
+
                     }).build());
 
     public static void register(IEventBus eventBus) {
